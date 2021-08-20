@@ -1,0 +1,67 @@
+﻿
+@{ ViewBag.Title = "pediatria"; }
+
+<div class=" container">
+
+    <a href=”javascript:window.print();”>
+        <img src="~/Content/img/impresora.png" alt="imprimir" class="impresora" />
+    </a>
+</div>
+<br />
+<form method="get" action="@Url.Action("AgregarCama", "Home", new {ViewBag.cama})">
+    <table>
+        <tr>
+            <th colspan="4">Hospital Carlos G. Durand</th>
+            <th colspan="3"><b>PLANILLA DE PRESCRIPCION</b></th>
+            <th colspan="3">Lista:</th>
+            <th colspan="3"><input type="text" class="ingresoLista" name="lista"></th>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                SALA: @ViewBag.tituloPrincipal
+            </td>
+            <td colspan="3">Fecha:</td>
+            <td colspan="6">
+                <input type="date" class="ingresoFecha" name="fecha">
+            </td>
+        </tr>
+        <tr>
+            <td>CAMA</td>
+            <td>DESAYUNO Y MERIENDA</td>
+            <td>@ViewBag.uno</td>
+            <td>@ViewBag.dos</td>
+            <td>@ViewBag.tres</td>
+            <td>@ViewBag.cuatro</td>
+            <td>@ViewBag.cinco</td>
+            <td>@ViewBag.seis</td>
+            <td>@ViewBag.siete</td>
+            <td>@ViewBag.ocho</td>
+            <td>@ViewBag.nueve</td>
+            <td>@ViewBag.diez /FLA</td>
+            <td>@ViewBag.once</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="text" class="ingresoDietas" name="desayuno_merienda"></td>
+            <td><input type="text" class="ingresoDietas" name="MAMA"></td>
+            <td><input type="text" class="ingresoDietas" name="R1"></td>
+            <td><input type="text" class="ingresoDietas" name="Dos"></td>
+            <td><input type="text" class="ingresoDietas" name="DosA"></td>
+            <td><input type="text" class="ingresoDietas" name="DosB"></td>
+            <td><input type="text" class="ingresoDietas" name="Tres"></td>
+            <td><input type="text" class="ingresoDietas" name="Cuatro"></td>
+            <td><input type="text" class="ingresoDietas" name="Cinco"></td>
+            <td><input type="text" class="ingresoDietas" name="Ind"></td>
+            <td><input type="text" class="ingresoDietas" name="Sonda"></td>
+            <td><input type="number" class="ingresoDietas" name="Edad"></td>
+        </tr>
+    </table>
+    <br />
+    <div class="aclaraciones">
+        @ViewBag.aclaraciones
+    </div>
+    <input type="submit" class="botonesGuardar" name="ButtonGuardar" value="Guardar" />
+</form>
+
+

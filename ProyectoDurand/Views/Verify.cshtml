@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Verify";
+}
+
+<h2>Verify</h2>
+<form method="post" action="~/Views/Home/salasNutri.cshtml">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <div class="cuadrado">
+                <h2 class="inicioSesion"> Iniciar sesión </h2>
+                <br />
+                <div class="container-fluid">
+                    <div class="row" id="map_section">
+                        <div class="col-12">
+                            <div class="input-group mb-3 justify-content-md-center ">
+                                <input type="text" class="form-control ingresos" placeholder="Ingrese su mail" aria-label="Username" name="Email" id="usuario">
+                            </div>
+                            <br />
+                            <div class="input-group mb-3 justify-content-md-center ">
+                                <input type="password" class="form-control ingresos" placeholder="Ingrese su contraseña" aria-label="Username" Name="Contraseña" id="contrasena">
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <input type="button" class="boton" value="Login" onclick="location.href='@Url.Action("Verify" , "Home", new { Email="hola", Contraseña="123" })'" />
+            </div>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</form>

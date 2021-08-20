@@ -1,0 +1,359 @@
+﻿
+.modalError {
+    position: fixed;
+    top: 2%;
+}
+.navbarEstilo {
+    background-color: #285580;
+    height:10vw;
+    width:100%;
+}
+.logoTexto {
+    color: white;
+    font-size: 2vw;
+    margin-top: -2vw;
+}
+.imgVolver {
+    max-width: 5vw;
+    max-height: 5vw;
+}
+.imgCerrarsesion {
+    max-width: 9vw;
+    max-height: 9vw;
+}
+.volverDiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.cerrarsesionDiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right:0;
+}
+.loading-image {
+   width: 200px;
+}
+
+#loading {
+    -webkit-animation: fadein 1s; 
+    -moz-animation: fadein 1s; 
+    -o-animation: fadein 1s; 
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.rowNavbar{
+    width: 100%;
+}
+
+.inicioSesion {
+    font-size: 2vw;
+}
+
+.ingresos {
+    position: center;
+    font-size: 1vw;
+    text-align: center;
+    height: auto;
+    color:black;
+}
+
+img {
+     max-width: 7vw;
+    max-height: 7vw;
+}
+
+body {
+    background-color: #EFF1F3;
+    padding:0;
+    margin:0;
+}
+
+footer {
+    bottom: 0;
+}
+
+
+.cuadrado {
+    background: #285580;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    color: white;
+    font-family: cursive;
+    height: 25vw;
+    width: 60vw;
+    display: table-cell;
+    vertical-align:middle;
+}
+
+
+.boton {
+    font-size: 1.5vw;
+    font-family: cursive;
+    color: white;
+    background: #164160;
+    border: 0px;
+    width: 12vw;
+    height: auto;
+}
+
+.botones {
+    background: #285580;
+    color: white;
+    border-radius: 20px;
+    border: 0px;
+    width: 20vw;
+    height: 4vw;
+    font-size: 2vw;
+    margin-bottom: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botonesGuardar {
+    background: #285580;
+    color: white;
+    border-radius: 20px;
+    border: 0px;
+    width: 7vw;
+    height: 2vw;
+    font-size: 1vw;
+    margin-bottom: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.ingresoFecha {
+    border: 0px solid #000;
+    background: #EFF1F3;
+}
+
+.ingresoLista {
+    border: 0px solid #000;
+    background: #285580;
+}
+.ingresoDietas {
+    border: 0px solid #000;
+    background: #EFF1F3;
+    width:100%;
+}
+
+table {
+    width: 100%;
+    font-family: Arial;
+    border: 2px solid #000;
+    border-collapse: collapse;
+    font-size: 1vw;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: #285580;
+    color: white;
+}
+
+.aclaraciones{
+    font-size:1vw;
+}
+
+.impresora{
+    height:2vw;
+    width:2vw;
+}
+
+@media screen and (max-width: 650px) {
+    header, footer, nav, aside {
+        display: none;
+    }
+
+    .aclaraciones {
+        font-size: 3vw;
+    }
+
+    .navbarEstilo {
+        background-color: #285580;
+        height: 19vw;
+        width: 350vw;
+    }
+
+    .logoTexto {
+        color: white;
+        font-size: 6vw;
+        margin-top: -2vw;
+    }
+
+    .btnResumenPacientes {
+        text-align: center;
+    }
+
+    .inicioSesion {
+        font-size: 6vw;
+    }
+
+    .ingresos {
+        position: center;
+        font-size: 4vw;
+        text-align: center;
+        height: auto;
+    }
+
+    img {
+        max-width: 13vw;
+        max-height: 13vw;
+    }
+
+    body {
+        background-color: #EFF1F3;
+        padding: 0;
+        margin: 0;
+    }
+
+    .pFooter {
+        text-align: center;
+    }
+
+    .cuadrado {
+        background: #285580;
+        border-radius: 10vw;
+        color: white;
+        text-align: center;
+        font-family: cursive;
+        color: white;
+        font-family: cursive;
+        height: 25vw;
+        width: 60vw;
+        display: table-cell;
+    }
+
+
+    .boton {
+        font-size: 4vw;
+        font-family: cursive;
+        color: white;
+        background: #164160;
+        border: 0px;
+        width: 25vw;
+        height: auto;
+        margin-bottom: 3vw;
+    }
+
+    .botones {
+        background: #285580;
+        color: white;
+        border-radius: 20px;
+        border: 0px;
+        width: 26.5vw;
+        height: 15vw;
+        font-size: 4.5vw;
+        margin-bottom: 7vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .botonesGuardar {
+        background: #285580;
+        color: white;
+        border-radius: 20px;
+        border: 0px;
+        width: 19vw;
+        height: 9vw;
+        font-size: 4vw;
+        margin-bottom: 7vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a:link, a:visited, a:active, a:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+    .imgVolver {
+        max-width: 17vw;
+        max-height: 17vw;
+        position: absolute;
+        right:0;
+    }
+
+    table {
+        width: 100%;
+        font-family: Arial;
+        border: 2px solid #000;
+        border-collapse: collapse;
+        font-size: 4vw;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 5px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #285580;
+        color: white;
+    }
+    impresoraButton {
+        margin-left: 90%;
+    }
+    .imgCerrarsesion {
+        max-width: 17vw;
+        max-height: 17vw;
+        position: relative;
+        left:0;
+    }
+}

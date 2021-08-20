@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <div id="loading">
+        <img class="loading-image" src="~/Content/img/imagen carga.gif" alt="Cargando..." />
+    </div>
+    <script type="text/javascript">
+        window.onload = function () { document.getElementById("loading").style.display = "none" }
+    </script>
+    <nav class="navbar navbar-light navbarEstilo">
+        <div class="container-fluid">
+            <div class="row rowNavbar">
+                <div class="col-md-4  volverDiv">
+                    @if (ViewBag.volverNo != "NO")
+                    {
+        <a href="@Url.Action(ViewBag.volver,"Home")" class=" volver d-block w-100">
+            <img src="~/Content/img/volver.jpg" alt="volver" class="d-block imgVolver">
+        </a>}
+                </div>
+                <div class="col-md-4">
+                    <a class="navbar-brand logoTexto">
+                        <img src="~/Content/img/logo.png" alt="logo" class="d-inline-block align-text-center">
+                        <em class="logoTexto"> <b> @ViewBag.tituloPrincipal </b> </em>
+                    </a>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2 cerrarsesionDiv">
+                    @if (ViewBag.cerrarNo != "NO")
+                    {
+        <a href="@Url.Action("Index","Home")" class=" cerrarsesion d-block w-100">
+            <img src="~/Content/img/cerrar sesion.jpg" alt="cerrarsesion" class="d-block imgCerrarsesion">
+        </a>}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <br>
+    <footer>
+        <p class="pFooter">&copy; @DateTime.Now.Year - Nutrición Hospital Durand</p>
+    </footer>
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/Content/estilos.css">
+</body>
+</html>

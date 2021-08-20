@@ -1,0 +1,63 @@
+﻿@{ ViewBag.Title = "Home Page"; }
+<br />
+<br />
+<br />
+<br />
+<p>
+    @ViewBag.nombre
+</p>
+<div class="container">
+    <div class="modal fade modalError" id="ErrorLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Error ingreso</h5>
+                </div>
+                <div class="modal-body">
+                    <h5>El usuario y/o contraseña ingresados son incorrectos.</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@if (@ViewBag.error == "si")
+{
+    <script>$("#ErrorLogin").modal()</script>
+}
+<form method="post" action="@Url.Action("Verify", "Home")">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <div class="cuadrado">
+                <h2 class="inicioSesion"> Iniciar sesión </h2>
+                <br />
+                <div class="container-fluid">
+                    <div class="row" id="map_section">
+                        <div class="col-12">
+                            <div class="input-group mb-3 justify-content-md-center contra">
+                                <div class=" ingresos">
+                                    @Html.TextBox("Email")
+                                </div>
+                            </div>
+                            <br />
+                            <div class="input-group mb-3 justify-content-md-center contra">
+                                <div class=" ingresos">
+                                    @Html.Password("Contraseña")
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="boton" value="Login" />
+            </div>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</form>
